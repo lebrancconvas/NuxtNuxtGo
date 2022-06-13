@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Form from './testform/form.vue';
+  import Form from '../components/form.vue';
   export default {
     name: "Index",
     components: {
