@@ -1,30 +1,33 @@
 <template>
   <div>
-    <h1>Nuxt Nuxt Go</h1>
-    <h2>FORM</h2>
-    <form action="">
+    <header>
+      <h1>Nuxt Nuxt Go</h1>
+      <h2>FORM</h2>
+    </header>
+    <form action="POST">
       <div>
-        <label>First Name</label>
+        <label>First Name *</label>
         <input type="text" placeholder="First Name" v-model="firstname" required>
       </div>
       <div>
-        <label>Last Name</label>
+        <label>Last Name *</label>
         <input type="text" placeholder="Last Name" v-model="lastname" required>
       </div>
       <div>
-        <label>Age</label>
+        <label>Age *</label>
         <input type="number" placeholder="Age" v-model="age" required>
       </div>
       <div>
-        <label>E-Mail</label>
+        <label>E-Mail *</label>
         <input type="email" placeholder="E-Mail" v-model="email" required>
       </div>
       <div>
-        <label>Tel.</label>
+        <label>Tel. *</label>
         <input type="tel" placeholder="Telephone" v-model="tel" required>
       </div>
       <div>
-        <input type="image" src="" alt="">
+        <label>Image Upload (.jpg, .jpeg, .png)</label>
+        <input type="file" name="image" id="image">
       </div>
       <div>
         <input class="submit" type="submit" value="Submit">
@@ -57,6 +60,9 @@ export default {
 </script>
 
 <style>
+  header {
+    text-align: center;
+  }
   form {
     max-width: 450px;
     margin: 30px auto;
