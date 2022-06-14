@@ -43,11 +43,23 @@ func main() {
 	router.Use(CORSMiddleware())
 
 	router.GET("/users", getUser)
+	router.POST("/users", addUser) 
 	router.Run(":8000")
 }
 
 func getUser(c *gin.Context) {
 	c.JSON(http.StatusOK, data)
+}
+
+func addUser(c *gin.Context) {
+	var newUser User
+
+	if err := c.BindJSON(&newUser); err != nil {
+		return
+	}
+
+	data = append(data, newUser)
+	c.JSON(http.StatusCreated, newUser)
 }
 
 func CORSMiddleware() gin.HandlerFunc {
