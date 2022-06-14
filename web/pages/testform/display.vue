@@ -1,13 +1,12 @@
 <template>
   <div id="display">
     <h1>Display</h1>
-    <div v-for="user in userData" :key="user.id">
+    <div v-for="user in userData" :key="user.id" id="userList">
       <div>First Name: {{ user.firstname }}</div>
       <div>Last Name: {{ user.lastname }}</div>
       <div>Age: {{ user.age }}</div>
       <div>E-Mail: {{ user.email }}</div>
       <div>Tel: {{ user.tel }}</div>
-      <div></div>
     </div>
   </div>
 </template>
@@ -37,5 +36,8 @@
 <style>
   #display {
     text-align: center;
+  }
+  #userList {
+    margin: 5px 0 10px 0;
   }
 </style>

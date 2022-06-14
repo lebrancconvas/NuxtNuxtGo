@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Form />
+    <h1>Nuxt Nuxt Go</h1>
   </div>
 </template>
 
 <script>
-  import Form from '../components/form.vue';
-  export default {
-    name: "Index",
-    components: {
-      Form
-    }
-  }
+  // import Form from './testform/form.vue';
+  // export default {
+  //   name: "Index",
+  //   components: {
+  //     Form
+  //   }
+  // }
 </script>
